@@ -4,43 +4,43 @@
 --       Consider add ';' at end sentence.
 
 CREATE TABLE employee (
-	PRIMARY KEY (id),
-	id INT,
-	id_dep INT,
-	name varchar (30),
-	first_name varchar (30),
-	last_name varchar (30),
-	FOREIGN KEY (id_dep) REFERENCES employee_department(id) 
+    PRIMARY KEY (id),
+    id INT,
+    id_dep INT,
+    name varchar (30),
+    first_name varchar (30),
+    last_name varchar (30),
+    FOREIGN KEY (id_dep) REFERENCES employee_department(id) 
 );
 
 CREATE TABLE employee_department (
-	PRIMARY KEY (id),
-	id INT,
-	name varchar (30),
-	description varchar (30),
+    PRIMARY KEY (id),
+    id INT,
+    name varchar (30),
+    description varchar (30),
 );
 
 CREATE TABLE employee_hobby (
-	PRIMARY KEY (id),
-	id INT,
-	name varchar (30),
-	description varchar (30),
+    PRIMARY KEY (id),
+    id INT,
+    name varchar (30),
+    description varchar (30),
 );
 CREATE TABLE hoobies(
-	id_e INT,
-	id_d INT,
-	PRIMARY KEY (id_e),
-	PRIMARY KEY (id_d),
-	FOREIGN KEY id_e REFERENCES employee(id),
-	FOREIGN KEY id_d REFERENCES employee_department(id)
+    id_e INT,
+    id_d INT,
+    PRIMARY KEY (id_e),
+    PRIMARY KEY (id_d),
+    FOREIGN KEY id_e REFERENCES employee(id),
+    FOREIGN KEY id_d REFERENCES employee_department(id)
 );
 CREATE TABLE boos(
-	id_b INT,
-	id_e INT,
-	PRIMARY KEY (id_b),
-	PRIMARY KEY (id_e),
-	FOREIGN KEY id_b REFERENCES employee(id),
-	FOREIGN KEY id_e REFERENCES employee(id),
+    id_b INT,
+    id_e INT,
+    PRIMARY KEY (id_b),
+    PRIMARY KEY (id_e),
+    FOREIGN KEY id_b REFERENCES employee(id),
+    FOREIGN KEY id_e REFERENCES employee(id),
 
 }
 INSERT INTO employee VALUES(1,1,'Luis','Triana');

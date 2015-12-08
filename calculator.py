@@ -5,7 +5,7 @@ Module to sum all the numbers
 
 class CalculatorClass(object):
     """
-    Class with the method with sum 
+    Class with the method with sum
     """
 
     def sum(self, num_list):
@@ -15,5 +15,5 @@ class CalculatorClass(object):
         # your sum code here
         suma = 0
         for i in num_list:
-        	suma += i
+            suma += i
         return suma
