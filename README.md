@@ -5,7 +5,7 @@ Este repositorio servirá para que los aspirantes a colaborar con vauxoo suban a
 
 Hacer un fork de este repositorio, con tu usuario y empezar a resolver los problemas de la prueba técnica.
 
-[Prueba técnica](https://docs.google.com/forms/d/1yK7JNVM7kUchQrfU5hMEs3pqurvvR92VeXb-hUR7OP8/viewform?usp=send_form)
+[Prueba técnica](https://docs.google.com/forms/d/1lGuZt6POQLOV4AwwUNt9OiHZ6jZusCn1IdnFdnwH_uU/viewform)
 
 NOTE: Your PR will test it by travis using python unittest, flake8 and pylint.
 
