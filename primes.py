@@ -18,5 +18,5 @@ class PrimeClass(object):
         else: 
             for i in range(2, num_int):
                 if num_int % i == 0:
-                return False
+                    return False
         return True

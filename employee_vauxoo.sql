@@ -25,22 +25,22 @@ CREATE TABLE employee_department (
 CREATE TABLE employee_hobby (
     PRIMARY KEY (id),
     id INT,
+    id_em INT,
     name varchar (30),
     description varchar (30),
+    FOREIGN KEY (id_em) REFERENCES employee(id)
 );
 CREATE TABLE hoobies(
     id_e INT,
     id_d INT,
-    PRIMARY KEY (id_e),
-    PRIMARY KEY (id_d),
+    PRIMARY KEY (id_e, id_d),
     FOREIGN KEY (id_e) REFERENCES employee(id),
     FOREIGN KEY (id_d) REFERENCES employee_department(id)
 );
 CREATE TABLE boos(
     id_b INT,
     id_e INT,
-    PRIMARY KEY (id_b),
-    PRIMARY KEY (id_e),
+    PRIMARY KEY (id_b, id_e),
     FOREIGN KEY (id_b) REFERENCES employee(id),
     FOREIGN KEY (id_e) REFERENCES employee(id),
 
