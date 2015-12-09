@@ -7,6 +7,7 @@ CREATE TABLE employee (
     PRIMARY KEY (id),
     id INT,
     id_dep INT,
+    id_b INT,
     name varchar (30),
     first_name varchar (30),
     last_name varchar (30),
@@ -37,18 +38,12 @@ CREATE TABLE hoobies(
     FOREIGN KEY (id_e) REFERENCES employee(id),
     FOREIGN KEY (id_d) REFERENCES employee_department(id)
 );
-CREATE TABLE boos(
-    id_b INT,
-    id_e INT,
-    PRIMARY KEY (id_b, id_e),
-    FOREIGN KEY (id_b) REFERENCES employee(id),
-    FOREIGN KEY (id_e) REFERENCES employee(id),
 
 }
-INSERT INTO employee VALUES(1,1,'Luis','Triana');
-INSERT INTO employee VALUES(2,2,'David','Sanchez');
-INSERT INTO employee VALUES(3,3,'Ale','Escandon');
-INSERT INTO employee VALUES(4,4,'Alan Ramos');
+INSERT INTO employee VALUES(1,,NULL,1,'Luis','Triana');
+INSERT INTO employee VALUES(2,1,2,'David','Sanchez');
+INSERT INTO employee VALUES(3,1,3,'Ale','Escandon');
+INSERT INTO employee VALUES(4,1,4,'Alan Ramos');
 
 INSERT INTO employee_department VALUES(1,'Lacteos','Lacteos');
 INSERT INTO employee_department VALUES(2,'Bicicletas','Bicicletas');
